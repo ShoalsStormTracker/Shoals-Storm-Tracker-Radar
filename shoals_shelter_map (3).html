@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shoals Storm Tracker Shelter Map</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    #map {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    var map = L.map('map').setView([34.745, -87.667], 10); // Center on Muscle Shoals
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 18,
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    L.marker([34.5848976, -87.800482]).addTo(map).bindPopup('Charity Chapel Church');
+    L.marker([34.738928, -87.893438]).addTo(map).bindPopup('Barton Community Church');
+    L.marker([34.756692, -87.9695839]).addTo(map).bindPopup('Cherokee Community Storm Shelter');
+    L.marker([34.8005419, -87.4981923]).addTo(map).bindPopup('Colbert Alloys Park');
+    L.marker([34.669393, -87.7005798]).addTo(map).bindPopup('Colbert Heights High School');
+    L.marker([34.7325639, -87.7045301]).addTo(map).bindPopup('Colbert County Emergency Management');
+    L.marker([34.6925233, -87.6244863]).addTo(map).bindPopup('Colbert County Road Dept');
+    L.marker([34.7838794, -87.5295032]).addTo(map).bindPopup('Ford City Storm Shelter');
+    L.marker([34.7308535, -87.7019991]).addTo(map).bindPopup('Tuscumbia City Fire Department');
+    L.marker([34.6979269, -87.6524184]).addTo(map).bindPopup('2848 Denton Rd');
+    L.marker([34.583472, -87.5468251]).addTo(map).bindPopup('LaGrange Community Senior Center');
+    L.marker([34.7041408, -87.5279994]).addTo(map).bindPopup('Leighton Baptist Church');
+    L.marker([34.6002786, -87.6749525]).addTo(map).bindPopup('Littleville Senior Center');
+    L.marker([34.7125436, -87.7739868]).addTo(map).bindPopup('Locust Shores Volunteer Fire');
+    L.marker([34.7615235, -87.7092122]).addTo(map).bindPopup('Manning Homes');
+    L.marker([34.643026, -88.1107246]).addTo(map).bindPopup('Maud Storm Shelter');
+    L.marker([34.7564424, -87.5595224]).addTo(map).bindPopup('Nitrate Volunteer Fire');
+    L.marker([34.7389285, -87.6769381]).addTo(map).bindPopup('Northwest-Shoals Community College');
+    L.marker([34.8548281, -88.0851584]).addTo(map).bindPopup('Colbert County Rose Trail Park');
+    L.marker([34.7493394, -87.6922173]).addTo(map).bindPopup('East 17th Street & Southeast 8th Avenue');
+    L.marker([34.7708339, -87.6908861]).addTo(map).bindPopup('Sheffield Recreation Center');
+    L.marker([34.7330583, -87.704697]).addTo(map).bindPopup('Colbert Caring Center');
+    L.marker([34.7226616, -87.6932562]).addTo(map).bindPopup('914 S Hickory St');
+    L.marker([34.7552207, -87.5296071]).addTo(map).bindPopup('12491 County Line Rd');
+    L.marker([35.1968987, -87.024216]).addTo(map).bindPopup('East Hill Church of Christ');
+    L.marker([35.1956634, -87.0329819]).addTo(map).bindPopup('First Baptist Church of Pulaski');
+    L.marker([35.2007332, -87.03167]).addTo(map).bindPopup('First United Methodist Church');
+    L.marker([35.2580738, -86.926079]).addTo(map).bindPopup('New Zion Baptist Church');
+    L.marker([35.0953142, -87.1177252]).addTo(map).bindPopup('Oak Grove Baptist Church');
+    L.marker([35.3403016, -87.03369]).addTo(map).bindPopup('Richland Baptist Church');
+    L.marker([34.2865258, -85.9821731]).addTo(map).bindPopup('Crossville Fire Department');
+    L.marker([34.4349617, -85.7380663]).addTo(map).bindPopup('Dekalb County Court Referral');
+    L.marker([34.4525392, -85.9097626]).addTo(map).bindPopup('Fyffe Town Hall/Fyffe Municipal Court');
+    L.marker([34.3622394, -86.0053784]).addTo(map).bindPopup('Geraldine Town Hall');
+    L.marker([34.6329914, -85.7559436]).addTo(map).bindPopup('1106 Greenbriar Dr');
+    L.marker([34.6967416, -85.668456]).addTo(map).bindPopup('10808 AL-75');
+    L.marker([34.482803, -85.822547]).addTo(map).bindPopup('Plainview High School');
+    L.marker([34.5303882, -85.8929708]).addTo(map).bindPopup('Powell Fire Department');
+    L.marker([34.4659908, -85.8733024]).addTo(map).bindPopup('Shiloh Town Office');
+    L.marker([34.5609191, -85.802479]).addTo(map).bindPopup('Sylvania Fire Department');
+    L.marker([34.543139, -85.8131914]).addTo(map).bindPopup('Upper Sand Mountain Parish');
+    L.marker([34.5715217, -85.6171954]).addTo(map).bindPopup('Valley Head Park');
+    L.marker([34.264469, -86.616286]).addTo(map).bindPopup('112 Fairview Rd');
+    L.marker([34.1504181, -86.9279382]).addTo(map).bindPopup('Bethsadia Volunteer Fire Department, Station #1');
+    L.marker([34.0338751, -87.0060038]).addTo(map).bindPopup('Brushy Pond Community Center');
+    L.marker([34.153046, -86.8318369]).addTo(map).bindPopup('Cullman County Center');
+    L.marker([34.2066288, -87.0639308]).addTo(map).bindPopup('74 Co Rd 1034');
+    L.marker([33.9345216, -86.8913689]).addTo(map).bindPopup('Colony Senior Citizens');
+    L.marker([33.9484027, -86.8885065]).addTo(map).bindPopup('65 Byars Rd');
+    L.marker([34.0932732, -87.0635657]).addTo(map).bindPopup('Crane Hill Senior Citizens Center');
+    L.marker([34.193293, -86.8571915]).addTo(map).bindPopup('Cullman County Fairgrounds');
+    L.marker([34.193099, -86.8594063]).addTo(map).bindPopup('Cullman Senior Center');
+    L.marker([34.049208, -86.8707415]).addTo(map).bindPopup('DODGE CITY TOWN HALL');
+    L.marker([34.0405616, -86.884353]).addTo(map).bindPopup('Dodge City Volunteer Fire Department');
+    L.marker([34.1714445, -86.8521325]).addTo(map).bindPopup('Cullman Housing Authority');
+    L.marker([34.010237, -86.7498922]).addTo(map).bindPopup('Garden City Town Hall');
+    L.marker([34.1078186, -86.8679199]).addTo(map).bindPopup('Good Hope Town Hall Ball Fields');
+    L.marker([34.095102, -86.880549]).addTo(map).bindPopup('Good Hope Community Center');
+    L.marker([34.2630244, -86.7503996]).addTo(map).bindPopup('Gold Ridge Community Center');
+    L.marker([34.1090086, -86.8670691]).addTo(map).bindPopup('City of Good Hope');
+    L.marker([34.0604282, -86.7681882]).addTo(map).bindPopup('202 Bangor Ave');
+    L.marker([34.065164, -86.7791738]).addTo(map).bindPopup('Hanceville Senior Center');
+    L.marker([34.1751471, -86.6134981]).addTo(map).bindPopup('60 Finley Cir');
+    L.marker([34.0808118, -86.9540513]).addTo(map).bindPopup('Smith Lake Park');
+    L.marker([34.2386201, -86.8633254]).addTo(map).bindPopup('Vinemont-Providence Fire Department');
+    L.marker([34.2386201, -86.8633254]).addTo(map).bindPopup('Vinemont-Providence Fire Department');
+    L.marker([34.2401188, -86.9568136]).addTo(map).bindPopup('West Point Town Hall');
+    L.marker([34.4731997, -87.8653773]).addTo(map).bindPopup('Belgreen church of Christ');
+    L.marker([34.3945369, -87.6683604]).addTo(map).bindPopup('Blue Springs Fire Department');
+    L.marker([34.4518178, -88.0232085]).addTo(map).bindPopup('Burnout Volunteer Fire Department');
+    L.marker([34.4993573, -87.7391695]).addTo(map).bindPopup('Chucky Mullins Multi Purpose Center');
+    L.marker([34.507859, -87.7356702]).addTo(map).bindPopup('0 Dillard Hollow Rd');
+    L.marker([34.5223865, -87.7153336]).addTo(map).bindPopup('Russellville Fire Department');
+    L.marker([34.4091866, -87.7912174]).addTo(map).bindPopup('Frog Pond Fire Department');
+    L.marker([34.3603375, -87.8114091]).addTo(map).bindPopup('Gravel Hill Volunteer Fire Department');
+    L.marker([34.3339726, -87.9291835]).addTo(map).bindPopup('Hodges City Hall');
+    L.marker([34.4850876, -87.7139981]).addTo(map).bindPopup('John Blackwell Sports Complex');
+    L.marker([34.3464597, -87.7084879]).addTo(map).bindPopup('Phil Campbell Housing Auth');
+    L.marker([34.3465154, -87.7139904]).addTo(map).bindPopup('Phil Campbell Community Center');
+    L.marker([34.4399495, -88.1433018]).addTo(map).bindPopup('Red Bay Fire Station');
+    L.marker([34.442327, -88.1480598]).addTo(map).bindPopup('First United Methodist Church');
+    L.marker([34.4486741, -88.1423641]).addTo(map).bindPopup('Red Bay City Water Park');
+    L.marker([34.5003963, -87.7355654]).addTo(map).bindPopup('511 Gaines Ave');
+    L.marker([34.5207953, -87.7393335]).addTo(map).bindPopup('1559 City Lake Dr NW');
+    L.marker([34.5076374, -87.7286324]).addTo(map).bindPopup('Russellville City Court');
+    L.marker([34.5074612, -87.7293076]).addTo(map).bindPopup('Russellville First Methodist Church');
+    L.marker([34.3904518, -87.7280753]).addTo(map).bindPopup('Spruce Pine Community Center');
+    L.marker([34.4978149, -87.718048]).addTo(map).bindPopup('Little Tigers Preschool');
+    L.marker([34.4816625, -87.7136248]).addTo(map).bindPopup('Town & Country Mobile Home Community');
+    L.marker([34.3792693, -87.5737009]).addTo(map).bindPopup('Union Community Center');
+    L.marker([34.3771428, -88.0604377]).addTo(map).bindPopup('Vina Fire Department');
+    L.marker([34.5138227, -87.743022]).addTo(map).bindPopup('Westside Housing Development');
+    L.marker([34.9478891, -85.7139644]).addTo(map).bindPopup('Bridgeport Community Center');
+    L.marker([34.9404495, -85.7208874]).addTo(map).bindPopup('Bridgeport Elementary School');
+    L.marker([34.9440006, -85.7145433]).addTo(map).bindPopup('Bridgeport Middle School');
+    L.marker([34.938804, -85.6270951]).addTo(map).bindPopup('Bryant Elementary School');
+    L.marker([34.6083961, -85.9172058]).addTo(map).bindPopup('Dutton Elementary School');
+    L.marker([34.7210828, -85.9525961]).addTo(map).bindPopup('Kevin Dukes Career & Innovation Academy');
+    L.marker([34.7691881, -85.6948574]).addTo(map).bindPopup('Flat Rock Elementary School');
+    L.marker([34.8402088, -85.6312771]).addTo(map).bindPopup('28424 AL-71');
+    L.marker([34.7224546, -85.9689803]).addTo(map).bindPopup('Hollywood Elementary School');
+    L.marker([34.6722248, -86.0339176]).addTo(map).bindPopup('Jackson County Courthouse');
+    L.marker([34.5377904, -86.0767412]).addTo(map).bindPopup('Langston Town Hall');
+    L.marker([34.5169982, -86.0009231]).addTo(map).bindPopup('Macedonia School');
+    L.marker([34.8995012, -85.7896674]).addTo(map).bindPopup('North Jackson High School');
+    L.marker([34.8481161, -85.6233839]).addTo(map).bindPopup('North Sand Mountain High School');
+    L.marker([34.6924128, -86.3564491]).addTo(map).bindPopup('Paint Rock Volunteer Fire Department');
+    L.marker([34.8435047, -86.2441]).addTo(map).bindPopup('Paint Rock Valley High School');
+    L.marker([34.6798071, -85.8489634]).addTo(map).bindPopup('Pisgah Baptist Church');
+    L.marker([34.6816977, -85.8440911]).addTo(map).bindPopup('Pisgah High School');
+    L.marker([34.8450519, -86.2431385]).addTo(map).bindPopup('County Road 3');
+    L.marker([34.7008734, -85.7638107]).addTo(map).bindPopup('Rosalie Elementary School');
+    L.marker([34.6572333, -86.0019558]).addTo(map).bindPopup('2101 Veterans Dr');
+    L.marker([34.5810927, -85.9876495]).addTo(map).bindPopup('Section City Town Hall');
+    L.marker([34.5816879, -85.9803085]).addTo(map).bindPopup('Section High School');
+    L.marker([34.8151563, -86.1243721]).addTo(map).bindPopup('Skyline High School');
+    L.marker([34.8736476, -85.8274953]).addTo(map).bindPopup('Stevenson Housing Authority');
+    L.marker([34.8646108, -85.8342321]).addTo(map).bindPopup('Stevenson Fire and Rescue');
+    L.marker([34.8772896, -85.8165039]).addTo(map).bindPopup('Stevenson Elementary School');
+    L.marker([34.86309, -85.8343021]).addTo(map).bindPopup('Stevenson Middle School');
+    L.marker([34.6234322, -86.2725783]).addTo(map).bindPopup('Woodville High School');
+    L.marker([34.9703245, -87.3691615]).addTo(map).bindPopup('Bank Independent');
+    L.marker([34.8490345, -87.3932048]).addTo(map).bindPopup('Elgin Church of Christ');
+    L.marker([34.9261111, -87.2652778]).addTo(map).bindPopup('First Baptist Church');
+    L.marker([34.8263186, -87.2919431]).addTo(map).bindPopup('First Baptist Church Rogersville');
+    L.marker([34.8582706, -87.5454954]).addTo(map).bindPopup('Killen Methodist Church');
+    L.marker([34.9680149, -87.3709821]).addTo(map).bindPopup('Lexington City Hall');
+    L.marker([34.8166756, -87.6821418]).addTo(map).bindPopup('North Wood United Methodist');
+    L.marker([34.8549657, -87.6922022]).addTo(map).bindPopup('Petersville Church Of Christ');
+    L.marker([34.8738745, -87.77853]).addTo(map).bindPopup('Pleasant Hill Church');
+    L.marker([34.8278731, -87.2880389]).addTo(map).bindPopup('Rogersville Church of Christ');
+    L.marker([34.8389287, -87.2948209]).addTo(map).bindPopup('Rogersville Ball Park');
+    L.marker([34.825242, -87.2940851]).addTo(map).bindPopup('Rogersville Town Hall');
+    L.marker([34.8324639, -87.3081304]).addTo(map).bindPopup('Rogersville United Methodist');
+    L.marker([34.873472, -87.690087]).addTo(map).bindPopup('Underwood Petersville Community Center');
+    L.marker([34.9064705, -87.9906673]).addTo(map).bindPopup('Wright Chapel Community Church');
+    L.marker([34.566086, -87.2254433]).addTo(map).bindPopup('Chalybeate Fire Department');
+    L.marker([34.5633332, -87.4139708]).addTo(map).bindPopup('Hatton Senior Center');
+    L.marker([34.5769596, -87.3619586]).addTo(map).bindPopup('3157 Co Rd 150');
+    L.marker([34.4814393, -87.293927]).addTo(map).bindPopup('Moulton Senior Center');
+    L.marker([34.4813059, -87.2735434]).addTo(map).bindPopup('Western Sirloin Steakhouse');
+    L.marker([34.464123, -87.4772044]).addTo(map).bindPopup('3142 County Rd 460');
+    L.marker([34.7673377, -87.3706283]).addTo(map).bindPopup('Red Bank Missionary Baptist');
+    L.marker([34.666451, -87.2946345]).addTo(map).bindPopup('Roy Coffee Ball Park');
+    L.marker([34.4191174, -87.1688159]).addTo(map).bindPopup('Speake Senior Center');
+    L.marker([34.4746627, -87.1569804]).addTo(map).bindPopup('Speake V.F.D.');
+    L.marker([34.6828594, -87.4060596]).addTo(map).bindPopup('1025 Wallace St');
+    L.marker([34.5647514, -87.1667968]).addTo(map).bindPopup('6229 Co Rd 214');
+    L.marker([34.4372096, -87.2919781]).addTo(map).bindPopup('Pleasant Grove Baptist Church');
+    L.marker([34.9907094, -86.846723]).addTo(map).bindPopup('Ardmore Town Hall');
+    L.marker([34.9906051, -86.838359]).addTo(map).bindPopup('29910 Park Ave');
+    L.marker([34.7516098, -87.0361599]).addTo(map).bindPopup('Ark of Promise Apostolic Church');
+    L.marker([34.7261042, -87.0720847]).addTo(map).bindPopup('14008 Grover Dr');
+    L.marker([34.9241086, -86.9680367]).addTo(map).bindPopup('Elkmont Volunteer Fire Department');
+    L.marker([34.9474796, -87.191441]).addTo(map).bindPopup('Good Springs Community Center');
+    L.marker([34.7719296, -86.787179]).addTo(map).bindPopup('Good Shepherd United Methodist');
+    L.marker([34.9907837, -87.1528668]).addTo(map).bindPopup('LESTER TOWN HALL');
+    L.marker([34.8396661, -87.02886]).addTo(map).bindPopup('Owens Senior Center');
+    L.marker([34.8555547, -87.0457971]).addTo(map).bindPopup('21465 AL-99');
+    L.marker([34.7044297, -87.0276159]).addTo(map).bindPopup('10078 Settle Rd');
+    L.marker([34.8893994, -86.8248909]).addTo(map).bindPopup('27718 McKee Rd');
+    L.marker([34.8692722, -87.164688]).addTo(map).bindPopup('PLEASANT GROVE VOLUNTEER FIRE DEPARTMENT');
+    L.marker([34.9390927, -87.1237585]).addTo(map).bindPopup('West Limestone High School');
+    L.marker([34.9337261, -86.8201632]).addTo(map).bindPopup('Wooley Springs Storm Shelter');
+    L.marker([34.823717, -86.7484682]).addTo(map).bindPopup('Asbury Church Harvest');
+    L.marker([34.9697374, -86.7250941]).addTo(map).bindPopup('Bobo Volunteer Fire Department');
+    L.marker([34.7373855, -86.6422304]).addTo(map).bindPopup('Huntsville First Seventh-day Adventist Church');
+    L.marker([34.6892295, -86.3776844]).addTo(map).bindPopup('Gurley Recreational Center');
+    L.marker([34.8191415, -86.7715421]).addTo(map).bindPopup('Harvest Youth Club');
+    L.marker([34.7661116, -86.3676091]).addTo(map).bindPopup('Killingsworth Cove Fire Department');
+    L.marker([34.8701831, -86.5863434]).addTo(map).bindPopup('Meridianville Volunteer Fire Department');
+    L.marker([34.8403359, -86.518255]).addTo(map).bindPopup('Moores Mill Volunteer Fire Rescue');
+    L.marker([34.5372092, -86.3944452]).addTo(map).bindPopup('New Hope City Hall');
+    L.marker([34.5840727, -86.4512893]).addTo(map).bindPopup('Owens Cross Roads City Hall');
+    L.marker([34.7139622, -86.8108305]).addTo(map).bindPopup('Parker Chapel');
+    L.marker([34.5867891, -86.7373807]).addTo(map).bindPopup('Triana Tornado Shelter');
+    L.marker([34.3285752, -86.1661864]).addTo(map).bindPopup('Martling Friendship Center');
+    L.marker([34.4204942, -86.2664446]).addTo(map).bindPopup('22165 US-431');
+    L.marker([34.3888313, -86.3707704]).addTo(map).bindPopup('2485 Georgia Mountain Rd');
+    L.marker([34.5241986, -86.2560986]).addTo(map).bindPopup('307 2nd Ave W');
+    L.marker([34.5267196, -86.2540483]).addTo(map).bindPopup('21 1st Ave W');
+    L.marker([34.4867973, -86.3800201]).addTo(map).bindPopup('Hebron Community Center');
+    L.marker([34.501562, -86.309932]).addTo(map).bindPopup('5743 Simpson Point Rd');
+    L.marker([34.2029459, -86.3853688]).addTo(map).bindPopup('Nixon Chapel Fire Department');
+    L.marker([34.2577807, -86.3409351]).addTo(map).bindPopup('7275 Section Line Rd');
+    L.marker([34.3818532, -86.3449185]).addTo(map).bindPopup('1345 Cha-La-Kee Rd');
+    L.marker([34.3605359, -86.4405126]).addTo(map).bindPopup('3850 Eddy Scant City Rd');
+    L.marker([34.4004506, -86.4458474]).addTo(map).bindPopup('Union Grove Town Hall');
+    L.marker([34.4519218, -86.1758526]).addTo(map).bindPopup('Wakefield Volunteer Fire Department');
+    L.marker([34.1719641, -86.2446541]).addTo(map).bindPopup('118 Whitesville Church Rd');
+    L.marker([34.5635433, -87.0496752]).addTo(map).bindPopup('Austin High School');
+    L.marker([34.4704038, -86.5683942]).addTo(map).bindPopup('Brindlee Mountain VFD');
+    L.marker([34.4786486, -86.6903611]).addTo(map).bindPopup('Cotaco Fire Department');
+    L.marker([34.414438, -87.0895817]).addTo(map).bindPopup('Danville Fire & Rescue Station 1');
+    L.marker([34.6059955, -86.9833485]).addTo(map).bindPopup('Decatur City Hall');
+    L.marker([34.5936128, -86.9717992]).addTo(map).bindPopup('Decatur High School');
+    L.marker([34.3282748, -86.7598242]).addTo(map).bindPopup('Eva Fire Department');
+    L.marker([34.5180662, -86.9797503]).addTo(map).bindPopup('Flint City Fire Department');
+    L.marker([34.4552687, -86.9212357]).addTo(map).bindPopup('Hartselle High School');
+    L.marker([34.3592923, -87.0208325]).addTo(map).bindPopup('Massey Fire Department');
+    L.marker([34.6064921, -86.9852302]).addTo(map).bindPopup('Morgan County Courthouse');
+    L.marker([34.4677526, -87.0603312]).addTo(map).bindPopup('Neel Volunteer Fire Department');
+    L.marker([34.4693904, -87.0063199]).addTo(map).bindPopup('Oak Ridge Volunteer Fire Department');
+    L.marker([34.473168, -86.9958438]).addTo(map).bindPopup('Oak Ridge Volunteer Fire Department');
+    L.marker([34.5495407, -86.8971354]).addTo(map).bindPopup('Priceville High School');
+    L.marker([34.472706, -87.0859503]).addTo(map).bindPopup('Punkin Center Volunteer Fire station 1');
+    L.marker([34.3396727, -86.7600763]).addTo(map).bindPopup('Shorty Ryan Park');
+    L.marker([34.4743081, -86.7989757]).addTo(map).bindPopup('Somerville Area Tornado Shelter');
+    L.marker([34.4513479, -86.8534842]).addTo(map).bindPopup('S.A.V.E.S. Station 2');
+    L.marker([34.6114009, -87.0872327]).addTo(map).bindPopup('Trinity Town Office');
+    L.marker([35.1756398, -87.7419996]).addTo(map).bindPopup('First Baptist Church');
+    L.marker([35.1758084, -87.7395365]).addTo(map).bindPopup('Collinwood United Methodist Church');
+    L.marker([35.3198404, -87.7627143]).addTo(map).bindPopup('Wayne County Clerk');
+  </script>
+</body>
+</html>
